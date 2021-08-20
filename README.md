@@ -30,5 +30,7 @@ A library should allow:
 * The solution is simple, and not over-engineered.
 * 3rd party frameworks or packages are kept at a minimum (except ones noted) - we want to see as much of the code you wrote.
 
-### Deliverables ###
-None. Be prepared to walk a Squire engineer through all steps in technical detail over zoom via screen share.
+### Submission ###
+1. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
+2. Commit your changes once you're done. Push the branch and create a pull request into `master`.
+3. Notify the person who gave you the challenge.
