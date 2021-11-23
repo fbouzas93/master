@@ -28,7 +28,8 @@ A library should allow:
 
 * Good software engineering practices are used and the code should be production ready.
 * The solution is simple, and not over-engineered.
-* 3rd party frameworks or packages are kept at a minimum (except ones noted) - we want to see as much of the code you wrote.
+* 3rd party frameworks or packages are kept at a minimum - we want to see as much of the code you wrote.
+* Library should be covered by tests.
 
 ### Submission ###
 1. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
