@@ -22,6 +22,7 @@ A library should allow:
 * Send an email to the person who gave you the challenge when you are finished
 * Support a notion of refunds, refund should reference the original transaction
 * Managing barber, customer and shop is out of the scope of this challenge, it is only provided for context, manage accounts on their own
+* REST api isn't a requirement
 
 
 ### What we expect from the code challenge ###
