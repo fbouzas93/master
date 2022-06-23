@@ -17,9 +17,9 @@ A library should allow:
 
 
 ### Important Notes ###
+* Send an email to the person who gave you the challenge before you start
 * Spend 24 hours maximum from the moment you specify your start date and time.
-* Send an email to Squire engineer before you start
-* Send an email to Squire engineer when you are finished
+* Send an email to the person who gave you the challenge when you are finished
 * Support a notion of refunds, refund should reference the original transaction
 * Managing barber, customer and shop is out of the scope of this challenge, it is only provided for context, manage accounts on their own
 
@@ -32,6 +32,7 @@ A library should allow:
 * Library should be covered by tests.
 
 ### Submission ###
+1. Fork this repository
 1. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
-2. Commit your changes once you're done. Push the branch and create a pull request into `master`.
+2. Commit your changes once you're done. Push the branch and create a pull request into `master` on a original repository.
 3. Notify the person who gave you the challenge.
