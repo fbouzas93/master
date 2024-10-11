@@ -33,7 +33,7 @@ A library should allow:
 * Library should be covered by tests.
 
 ### Submission ###
-1. Fork this repository
-1. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
-2. Commit your changes once you're done. Push the branch and create a pull request into `master` on a original repository.
-3. Notify the person who gave you the challenge.
+1. Fork this repository into your own bitbucket account
+2. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
+3. Commit your changes once you're done. Push the branch and create a pull request into `master` on your forked repository to show the net new changes.
+4. Email the person who sent you the challenge with a link to your public, forked, repository.
