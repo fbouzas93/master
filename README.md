@@ -1,39 +1,99 @@
-# Javascript/TypeScript Coding Challenge #
+# Booking App
 
-### Task ###
+A Node.js application for managing bookings, built with Express.js and PostgreSQL.
 
-Create a Javascript/TypeScript library with Node.js that will manage virtual bank accounts. The library should support making a deposit to an account, making a withdrawal from an account and transferring money between accounts. Use Postgres database and a library that you are comfortable with for persistence.
+## Prerequisites
 
-Use Case: Customer pays for a haircut by cash and leaves a tip, haircut money should go to the shop's cash account and the tip should go into the barber's cash account. Barber and shop could see their cash balances. When a customer requests a refund then the balance is taken out from the accounts.
+- Node.js v22
+- Docker and Docker Compose
+- npm (comes with Node.js)
 
-A library should allow:
+## Getting Started
 
-* Making a deposit to an account
-* Making a withdrawal from an account
-* Making a transfer between two accounts
-* Making a refund of a previous transaction
-* Getting the account balance
-* Showing a history of transactions for an account
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd platform-challenge
+```
 
+2. Install dependencies:
+```bash
+npm install
+```
 
-### Important Notes ###
-* Send an email to the person who gave you the challenge before you start
-* Spend 48 hours maximum from the moment you specify your start date and time.
-* Send an email to the person who gave you the challenge when you are finished
-* Support a notion of refunds, refund should reference the original transaction
-* Managing barber, customer and shop is out of the scope of this challenge, it is only provided for context, manage accounts on their own
-* REST api isn't a requirement
+3. Start the application using Docker Compose:
+```bash
+docker-compose up
+```
 
+This will start both the application and PostgreSQL database containers. The application will be available at `http://localhost:3000`.
 
-### What we expect from the code challenge ###
+## Database Migrations
 
-* Good software engineering practices are used and the code should be production ready.
-* The solution is simple, and not over-engineered.
-* 3rd party frameworks or packages are kept at a minimum - we want to see as much of the code you wrote.
-* Library should be covered by tests.
+The project uses `node-pg-migrate` for database migrations. Here are the available migration commands:
 
-### Submission ###
-1. Fork this repository into your own bitbucket account
-2. Create a new branch from `master` branch. Use the following pattern: `YYYY-MM-DD/firstname-lastname`. If Robert Smith would do the challenge on 2020/07/15, the branch would be called `2020-07-15/robert-smith`.
-3. Commit your changes once you're done. Push the branch and create a pull request into `master` on your forked repository to show the net new changes.
-4. Email the person who sent you the challenge with a link to your public, forked, repository.
+- Create a new migration:
+```bash
+npm run migrate:create -- <migration-name>
+```
+
+- Run all pending migrations:
+```bash
+npm run migrate:up
+```
+
+- Rollback the last migration:
+```bash
+npm run migrate:down
+```
+
+## Development
+
+- Start the application in development mode (with hot reload):
+```bash
+npm run dev
+```
+
+- Run tests:
+```bash
+npm test
+```
+
+- Lint the code:
+```bash
+npm run lint
+```
+
+## Environment Variables
+
+The application uses the following environment variables:
+
+- `POSTGRES_USER`: PostgreSQL username (default: postgres)
+- `POSTGRES_PASSWORD`: PostgreSQL password (default: postgres)
+- `POSTGRES_DB`: PostgreSQL database name (default: booking_app)
+- `PORT`: Application port (default: 3000)
+
+These variables are already configured in the `docker-compose.yml` file.
+
+## Project Structure
+
+```
+.
+├── src/              # Source code
+├── migrations/       # Database migrations
+├── init-scripts/     # Database initialization scripts
+├── docker-compose.yml
+└── package.json
+```
+
+## API Documentation
+
+[Add API documentation here]
+
+## Contributing
+
+[Add contribution guidelines here]
+
+## License
+
+[Add license information here]
