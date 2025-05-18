@@ -1,24 +1,16 @@
 const Appointment = require('../models/appointment');
+const appointmentService = require('../services/appointmentService');
 
 const appointmentController = {
   async create(req, res) {
     try {
-      const { startTime, duration, serviceProviderId, service } = req.body;
-
-      if (!startTime || !duration || !serviceProviderId || !service) {
-        return res.status(400).json({ error: 'All fields are required' });
+      const appointment = await appointmentService.create(req.body);
+      return res.status(201).json(appointment);
+    } catch (err) {
+      if (err.statusCode) {
+        return res.status(err.statusCode).json({ error: err.message });
       }
-
-      const appointment = await Appointment.create({
-        startTime,
-        duration,
-        serviceProviderId,
-        service
-      });
-
-      res.status(201).json(appointment);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+      return res.status(500).json({ error: err.message });
     }
   },
 
